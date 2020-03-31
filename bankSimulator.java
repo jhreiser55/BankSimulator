@@ -61,7 +61,6 @@ public class bankSimulator {
 						}
 						nextPerson.setTimeWhenDone(temp);
 						totalTimeSpentWaiting += (nextPerson.getTimeWhenDone() - nextPerson.getTimeEntered() - nextPerson.getTimeNeeded());
-						System.out.println(totalTimeSpentWaiting);
 					}
 					queue.add(nextPerson);
 
@@ -100,9 +99,7 @@ public class bankSimulator {
 					break;
 				}
 			}
-			System.out.println("total people: " + totalPeopleToday);
-			System.out.println("total wait: " + totalTimeSpentWaiting);
-			System.out.println("The average wait time today was: " + (totalTimeSpentWaiting/totalPeopleToday));
+			System.out.println("Average wait time is: " + (totalTimeSpentWaiting/totalPeopleToday));
 		}
 	}
 }
